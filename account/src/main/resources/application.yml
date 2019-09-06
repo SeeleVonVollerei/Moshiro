@@ -1,0 +1,28 @@
+# Port
+server:
+  port: 8081
+spring:
+  application:
+    name: accountService
+  # Spring Cloud
+  cloud:
+    consul:
+      host: localhost
+      port: 8500
+      discovery:
+        service-name: accountService
+  # Datasource
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://116.62.13.236:3306/jdbc?serverTimezone=Asia/Shanghai
+    username: root
+    password: nishishui
+  mvc:
+    throw-exception-if-no-handler-found: true
+  resources:
+    add-mappings: false
+# Mybatis-Config
+mybatis:
+  config-location: classpath:mybatis/mybatis-config.xml
+  mapper-locations: classpath:mybatis/mapper/**/*.xml
+
