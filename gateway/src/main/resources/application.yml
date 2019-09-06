@@ -10,6 +10,14 @@ spring:
         locator:
           enabled: true
           lower-case-service-id: true
+          filters:
+            - StripPrefix= 1
     consul:
       host: localhost
       port: 8500
+  devtools:
+    livereload:
+      port: 35502
+logging:
+  level:
+    org.springframework.cloud.gateway: TRACE

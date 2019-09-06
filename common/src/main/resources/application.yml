@@ -1,15 +1,14 @@
 server:
   port: 8082
-
 spring:
   application:
-    name: common
+    name: common-service
   cloud:
     consul:
       host: localhost
       port: 8500
       discovery:
-        service-name: commonService
+        service-name: common-service
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://116.62.13.236:3306/jdbc?serverTimezone=Asia/Shanghai
@@ -25,3 +24,6 @@ spring:
 
   profiles:
     active:
+  devtools:
+    livereload:
+      port: 35501

@@ -33,10 +33,6 @@
                     <groupId>org.springframework.cloud</groupId>
                     <artifactId>spring-cloud-netflix-core</artifactId>
                 </exclusion>
-                <exclusion>
-                    <groupId>org.springframework.cloud</groupId>
-                    <artifactId>spring-cloud-starter-netflix-ribbon</artifactId>
-                </exclusion>
             </exclusions>
         </dependency>
         <dependency>
