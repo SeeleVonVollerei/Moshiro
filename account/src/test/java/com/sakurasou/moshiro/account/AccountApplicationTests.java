@@ -4,6 +4,7 @@ import com.sakurasou.moshiro.account.mapper.ClientMapper;
 import com.sakurasou.moshiro.account.model.Client;
 import com.sakurasou.moshiro.account.remote.CommonRemote;
 import lombok.extern.slf4j.Slf4j;
+import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,7 +25,8 @@ public class AccountApplicationTests {
         clientMapper.insert(new Client("2", "sakura", "sakura@ss.com", "nishishui", "nishishui"));
         clientMapper.getAll().forEach(System.out::println);
         log.info("get all clients success");
-        clientMapper.deleteById("2");
+        Assert.assertEquals("sakura", clientMapper.selectById("20190002").getName());
+        clientMapper.deleteById("20190002");
         log.info("del client success");
         clientMapper.getAll().forEach(System.out::println);
         log.info("get all clients success");
