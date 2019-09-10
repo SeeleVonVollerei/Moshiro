@@ -8,4 +8,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 public interface CommonRemote {
     @GetMapping("/tableDetails/search/findSequenceId")
     String findSequenceIdByTableName(@RequestParam("tableName") String tableName);
+
+    @GetMapping("/tableDetails/search/updateSequenceId")
+    String updateSequenceIdByTableName(@RequestParam("tableName") String tableName, @RequestParam("sequenceId") String sequenceId);
 }
